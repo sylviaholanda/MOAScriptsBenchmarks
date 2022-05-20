@@ -1,0 +1,1385 @@
+<meta-data moamanager:name="software-name" moamanager:value="MOAManager"/>
+<meta-data moamanager:name="software-version" moamanager:value="1.0.35"/>
+<meta-data moamanager:name="software-release" moamanager:value="2019/06/04"/>
+<meta-data moamanager:name="software-copyright" moamanager:value="(C) 2015-2018 CIn (Informatic Center) of UFPE (Federal University of Pernambuco), Pernambuco, Brazil"/>
+<meta-data moamanager:name="software-web" moamanager:value="https://github.com/brunom4ciel/moamanager"/>
+<meta-data moamanager:name="user-owner" moamanager:value="brunom4ciel@gmail.com"/>
+<meta-data moamanager:name="script-data" moamanager:value="EvaluatePrequentialUFPEforDetectors -l (drift.DDMCwaringAdaptiveModifier2 -l trees.VFDT -d (USDD -n 300 -d 0.49) -s (Dynamic Training) -w 8 -m 200) -s (ConceptDriftStream -s (ConceptDriftStream -s (ConceptDriftStream -s (ConceptDriftStream  -s  (generators.AgrawalGenerator -f 1) -d  (generators.AgrawalGenerator -f 2) -p 16000 -w 500) -d (generators.AgrawalGenerator -f 3) -p 32000 -w 500) -d (generators.AgrawalGenerator -f 4) -p 48000 -w 500) -d (generators.AgrawalGenerator -f 5) -p 64000 -w 500) -r 30 -c -i 80000 -f 10 -q 10 -m True"/>
+<meta-data moamanager:name="script-original-filename" moamanager:value="USDD2-008-DW-0002.txt"/>
+<meta-data moamanager:name="script-cpu-datetime-start" moamanager:value="2022-01-20 13:44:58"/>
+<meta-data moamanager:name="script-cpu-datetime-end" moamanager:value="2022-01-20 13:57:43"/>
+<meta-data moamanager:name="script-cpu-time" moamanager:value="12m 45s"/>
+<meta-data moamanager:name="script-cpu-usage-start" moamanager:value="45%"/>
+<meta-data moamanager:name="script-cpu-usage-end" moamanager:value="74%"/>
+<meta-data moamanager:name="script-ram-usage-start" moamanager:value="45%"/>
+<meta-data moamanager:name="script-ram-usage-end" moamanager:value="46%"/>
+<meta-data moamanager:name="hardware-cpu" moamanager:value="Intel(R) Core(TM) i7-8700K CPU @ 3.70GHz"/>
+<meta-data moamanager:name="hardware-ram" moamanager:value="47.02 gb"/>
+<meta-data moamanager:name="hardware-disk" moamanager:value="227.74 gb"/>
+<meta-data moamanager:name="hardware-disk-usage" moamanager:value="220.14 gb"/>
+<meta-data moamanager:name="hardware-disk-free" moamanager:value="7.59 gb"/>
+<meta-data moamanager:name="os-system" moamanager:value="Ubuntu 18.04.5 LTS bionic"/>
+<meta-data moamanager:name="os-uptime" moamanager:value="5h 7m 28s"/>
+<meta-data moamanager:name="command-input" moamanager:value="java  -Xmx5000M -cp ""/opt/moamanager/moa/bin/brunom4ciel@gmail.com-v0002.jar:/opt/moamanager/moa/lib/*"" moa.DoTask \ ""EvaluatePrequentialUFPEforDetectors -l (drift.DDMCwaringAdaptiveModifier2 -l trees.VFDT -d (USDD -n 300 -d 0.49) -s (Dynamic Training) -w 8 -m 200) -s (ConceptDriftStream -s (ConceptDriftStream -s (ConceptDriftStream -s (ConceptDriftStream  -s  (generators.AgrawalGenerator -f 1) -d  (generators.AgrawalGenerator -f 2) -p 16000 -w 500) -d (generators.AgrawalGenerator -f 3) -p 32000 -w 500) -d (generators.AgrawalGenerator -f 4) -p 48000 -w 500) -d (generators.AgrawalGenerator -f 5) -p 64000 -w 500) -r 30 -c -i 80000 -f 10 -q 10 -m True"" > /var/www/moamanagerdata/exec/brunom4ciel@gmail.com/USDD2-008-DW-0002-272.txt"/>
+<meta-data moamanager:name="command-output" moamanager:value="eNqtUUFuwkAMvO8rLC4tEoSkQqqUG+LSSwGppUi9mcVJXHa9UbwEAeLv3ZQv1CdrPGOPbXN7v6Mq9wS39V0cS0oWd0F3UVbzRZ1ykBKKeVYUsAo9+T118JIXc7MM7aXjuoklPC/HCctfp0MBtpL6JWG8QKhgh3zEGCbwhp5dDDKBFZ3hm9ChHMyO9iU0MbblbOYDZtZrdn5IMrSZXGfGwP+G+UQ9gg2+dRTpACyQZ3muaY3NFiJ7GhuzRAEJEdBaUk0cjd3Jk0SM6SJA0nMXZAAys3GESmAbskfgCn6wg4pdQkLis7DU8MFXWleLOgnAOhxaKhhtyXLFDxOxoSTt8UlhNB0SHNijwalPp4K/72BXnx5TfwG4j4Yc"/>
+<meta-data moamanager:name="security-hash-hmac-file" moamanager:value="b6bb1740b501682c64352b838834a6fd"/>
+
+null
+moa.evaluante.DriftDetectionEvaluationMeasures
+Drift Detection Evaluation Measures
+Version: 1.1 July 2019, 1.0 Dezember 2018
+Author: Silas Garrido Teixeira de Carvalho Santos <sgtcs@cin.ufpe.br>,
+	Bruno Iran Ferreira Maciel <bifm@cin.ufpe.br>,
+	Rohgi Toshio Meneses <rtmc2@cin.ufpe.br>,
+	Roberto Souto Maior de Barros <roberto@cin.ufpe.br>
+Copyright: (C) 2015-2019 CIn (Informatic Center) of UFPE (Federal University of Pernambuco), Pernambuco, Brazil
+Web: http://cin.ufpe.br,
+	https://sites.google.com/view/conceptdrift/,
+	https://sites.google.com/site/moamethods/
+
+Accuracy:
+71.61758127
+75.45446197
+75.56938197
+76.72477186
+71.42759535
+74.80642915
+74.41953380
+74.31107679
+72.85870754
+74.46447712
+76.81650943
+76.10865642
+76.84974269
+74.48417018
+70.94759808
+76.47193391
+75.09212450
+76.58570357
+75.52994567
+75.52980103
+76.20921647
+70.27817413
+75.46233441
+74.75036863
+75.48780607
+76.14752264
+76.86740946
+76.57304580
+74.14358371
+75.66976567
+Mean (CI) = 74.92198098 (+-0.68)
+Mean = 74.92198098
+Confidence Interval = 0.67892325
+Geometric Mean = 74.90023134
+Median = 75.47507024
+Mode = NaN
+Sum = 2247.65942928
+Variance = 3.30581438
+Standard Deviation = 1.81818986
+Mean Deviation = 1.37029840
+Minimum = 70.27817413
+Maximum = 76.86740946
+Amplitude = 6.58923532
+Lower Quartile 25% (Q1) = 74.39241955
+Upper Quartile 75% (Q3) = 76.27489583
+Interquartile Range (IQR) = 1.88247628
+Percentile 10 = 71.44659394
+Percentile 90 = 76.80733567
+kurtosis = 0.86298377
+Percentage Coefficiente Kurtosis = 5.04573459
+Excess kurtosis = Platykurtic
+Skewness = -1.25501285
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+Time:
+10.34042639
+10.13754407
+13.82160704
+9.76052133
+8.48489110
+10.41154400
+11.21993116
+8.18239097
+12.53176340
+9.15121259
+12.64986531
+12.17734216
+11.30573430
+11.37252461
+11.41291693
+14.95699526
+21.33434945
+13.01700879
+17.25364477
+12.21060882
+14.50212666
+11.88878101
+12.88198687
+17.16979721
+13.18257266
+12.76557480
+17.87646769
+13.34430704
+10.17771552
+12.45336687
+Mean (CI) = 12.59918396 (+-1.08)
+Mean = 12.59918396
+Confidence Interval = 1.08334856
+Geometric Mean = 12.30565466
+Median = 12.33198784
+Mode = NaN
+Sum = 377.97551880
+Variance = 8.41731385
+Standard Deviation = 2.90126073
+Mean Deviation = 2.06446081
+Minimum = 8.18239097
+Maximum = 21.33434945
+Amplitude = 13.15195847
+Lower Quartile 25% (Q1) = 10.39376459
+Upper Quartile 75% (Q3) = 13.46363204
+Interquartile Range (IQR) = 3.06986744
+Percentile 10 = 9.21214347
+Percentile 90 = 17.24526002
+kurtosis = 1.78442059
+Percentage Coefficiente Kurtosis = 12.33030148
+Excess kurtosis = Platykurtic
+Skewness = 1.13884584
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+Memory (B/s):
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+Mean (CI) = 0.00000000 (+-0.00)
+Mean = 0.00000000
+Confidence Interval = 0.00000000
+Geometric Mean = 0.00000000
+Median = 0.00000000
+Mode = NaN
+Sum = 0.00000000
+Variance = 0.00000000
+Standard Deviation = 0.00000000
+Mean Deviation = 0.00000000
+Minimum = 0.00000000
+Maximum = 0.00000000
+Amplitude = 0.00000000
+Lower Quartile 25% (Q1) = 0.00000000
+Upper Quartile 75% (Q3) = 0.00000000
+Interquartile Range (IQR) = 0.00000000
+Percentile 10 = 0.00000000
+Percentile 90 = 0.00000000
+kurtosis = NaN
+Percentage Coefficiente Kurtosis = 0.00000000
+Excess kurtosis = Leptokurtic
+Skewness = NaN
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+Drift Detectin Sum:
+36.00000000
+29.00000000
+33.00000000
+36.00000000
+41.00000000
+28.00000000
+41.00000000
+33.00000000
+38.00000000
+29.00000000
+36.00000000
+34.00000000
+35.00000000
+32.00000000
+40.00000000
+18.00000000
+31.00000000
+26.00000000
+37.00000000
+42.00000000
+33.00000000
+51.00000000
+34.00000000
+39.00000000
+28.00000000
+32.00000000
+26.00000000
+27.00000000
+34.00000000
+34.00000000
+Mean (CI) = 33.76666667 (+-2.32)
+Mean = 33.76666667
+Confidence Interval = 2.32403797
+Geometric Mean = 33.18762903
+Median = 34.00000000
+Mode = 34.00000000
+Sum = 1013.00000000
+Variance = 38.73678161
+Standard Deviation = 6.22388798
+Mean Deviation = 4.51555556
+Minimum = 18.00000000
+Maximum = 51.00000000
+Amplitude = 33.00000000
+Lower Quartile 25% (Q1) = 29.00000000
+Upper Quartile 75% (Q3) = 37.25000000
+Interquartile Range (IQR) = 8.25000000
+Percentile 10 = 26.10000000
+Percentile 90 = 41.00000000
+kurtosis = 1.62487977
+Percentage Coefficiente Kurtosis = 61.46250000
+Excess kurtosis = Platykurtic
+Skewness = 0.17833437
+Coefficiente Skewness = -0.11246989
+Skewed Distribution = Negative Skew
+Sample Size = 30
+
+Warning Detection Sum:
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+Mean (CI) = 0.00000000 (+-0.00)
+Mean = 0.00000000
+Confidence Interval = 0.00000000
+Geometric Mean = 0.00000000
+Median = 0.00000000
+Mode = NaN
+Sum = 0.00000000
+Variance = 0.00000000
+Standard Deviation = 0.00000000
+Mean Deviation = 0.00000000
+Minimum = 0.00000000
+Maximum = 0.00000000
+Amplitude = 0.00000000
+Lower Quartile 25% (Q1) = 0.00000000
+Upper Quartile 75% (Q3) = 0.00000000
+Interquartile Range (IQR) = 0.00000000
+Percentile 10 = 0.00000000
+Percentile 90 = 0.00000000
+kurtosis = NaN
+Percentage Coefficiente Kurtosis = 0.00000000
+Excess kurtosis = Leptokurtic
+Skewness = NaN
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+Number of warning sequences with a drift end (TP):
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+Mean (CI) = 0.00000000 (+-0.00)
+Mean = 0.00000000
+Confidence Interval = 0.00000000
+Geometric Mean = 0.00000000
+Median = 0.00000000
+Mode = NaN
+Sum = 0.00000000
+Variance = 0.00000000
+Standard Deviation = 0.00000000
+Mean Deviation = 0.00000000
+Minimum = 0.00000000
+Maximum = 0.00000000
+Amplitude = 0.00000000
+Lower Quartile 25% (Q1) = 0.00000000
+Upper Quartile 75% (Q3) = 0.00000000
+Interquartile Range (IQR) = 0.00000000
+Percentile 10 = 0.00000000
+Percentile 90 = 0.00000000
+kurtosis = NaN
+Percentage Coefficiente Kurtosis = 0.00000000
+Excess kurtosis = Leptokurtic
+Skewness = NaN
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+Number of warning signs with a drift end (TP):
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+Mean (CI) = 0.00000000 (+-0.00)
+Mean = 0.00000000
+Confidence Interval = 0.00000000
+Geometric Mean = 0.00000000
+Median = 0.00000000
+Mode = NaN
+Sum = 0.00000000
+Variance = 0.00000000
+Standard Deviation = 0.00000000
+Mean Deviation = 0.00000000
+Minimum = 0.00000000
+Maximum = 0.00000000
+Amplitude = 0.00000000
+Lower Quartile 25% (Q1) = 0.00000000
+Upper Quartile 75% (Q3) = 0.00000000
+Interquartile Range (IQR) = 0.00000000
+Percentile 10 = 0.00000000
+Percentile 90 = 0.00000000
+kurtosis = NaN
+Percentage Coefficiente Kurtosis = 0.00000000
+Excess kurtosis = Leptokurtic
+Skewness = NaN
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+Number of warning sequences without end in drift (FP):
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+Mean (CI) = 0.00000000 (+-0.00)
+Mean = 0.00000000
+Confidence Interval = 0.00000000
+Geometric Mean = 0.00000000
+Median = 0.00000000
+Mode = NaN
+Sum = 0.00000000
+Variance = 0.00000000
+Standard Deviation = 0.00000000
+Mean Deviation = 0.00000000
+Minimum = 0.00000000
+Maximum = 0.00000000
+Amplitude = 0.00000000
+Lower Quartile 25% (Q1) = 0.00000000
+Upper Quartile 75% (Q3) = 0.00000000
+Interquartile Range (IQR) = 0.00000000
+Percentile 10 = 0.00000000
+Percentile 90 = 0.00000000
+kurtosis = NaN
+Percentage Coefficiente Kurtosis = 0.00000000
+Excess kurtosis = Leptokurtic
+Skewness = NaN
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+Amount of warning signs without end in drift (FP):
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+Mean (CI) = 0.00000000 (+-0.00)
+Mean = 0.00000000
+Confidence Interval = 0.00000000
+Geometric Mean = 0.00000000
+Median = 0.00000000
+Mode = NaN
+Sum = 0.00000000
+Variance = 0.00000000
+Standard Deviation = 0.00000000
+Mean Deviation = 0.00000000
+Minimum = 0.00000000
+Maximum = 0.00000000
+Amplitude = 0.00000000
+Lower Quartile 25% (Q1) = 0.00000000
+Upper Quartile 75% (Q3) = 0.00000000
+Interquartile Range (IQR) = 0.00000000
+Percentile 10 = 0.00000000
+Percentile 90 = 0.00000000
+kurtosis = NaN
+Percentage Coefficiente Kurtosis = 0.00000000
+Excess kurtosis = Leptokurtic
+Skewness = NaN
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+Detection Accuracy:
+0.99952500
+0.99966250
+0.99963750
+0.99960000
+0.99953750
+0.99967500
+0.99953750
+0.99963750
+0.99955000
+0.99966250
+0.99957500
+0.99962500
+0.99961250
+0.99962500
+0.99955000
+0.99980000
+0.99961250
+0.99972500
+0.99956250
+0.99952500
+0.99963750
+0.99938750
+0.99962500
+0.99953750
+0.99970000
+0.99965000
+0.99970000
+0.99971250
+0.99962500
+0.99960000
+Mean (CI) = 0.99961375 (+-0.00)
+Mean = 0.99961375
+Confidence Interval = 0.00002948
+Geometric Mean = 0.99961375
+Median = 0.99962500
+Mode = 0.99962500
+Sum = 29.98841250
+Variance = 0.00000001
+Standard Deviation = 0.00007894
+Mean Deviation = 0.00005867
+Minimum = 0.99938750
+Maximum = 0.99980000
+Amplitude = 0.00041250
+Lower Quartile 25% (Q1) = 0.99955000
+Upper Quartile 75% (Q3) = 0.99966250
+Interquartile Range (IQR) = 0.00011250
+Percentile 10 = 0.99952625
+Percentile 90 = 0.99971125
+kurtosis = 1.55380371
+Percentage Coefficiente Kurtosis = 0.00000001
+Excess kurtosis = Leptokurtic
+Skewness = -0.32941897
+Coefficiente Skewness = -0.42753990
+Skewed Distribution = Negative Skew
+Sample Size = 30
+
+Entropy:
+18.609825142
+15.019927607
+17.096466683
+18.578507284
+21.214922905
+14.522620566
+21.273707022
+17.130685734
+19.669259294
+14.991173723
+18.723528505
+17.594903728
+18.181682159
+16.585166461
+20.795946822
+9.317729991
+16.085193525
+13.483952582
+19.186125214
+21.803010718
+17.039599073
+26.407008935
+17.664486077
+20.218754156
+14.480284971
+16.569016070
+13.478117137
+14.030745886
+17.692410066
+17.684120686
+Mean (CI) = 17.504295957 (+-1.21)
+Mean = 17.504295957
+Confidence Interval = 1.205182933
+Geometric Mean = 17.203637049
+Median = 17.629694902
+Mode = NaN
+Sum = 525.128878722
+Variance = 10.417009102
+Standard Deviation = 3.227539171
+Mean Deviation = 2.348630893
+Minimum = 9.317729991
+Maximum = 26.407008935
+Amplitude = 17.089278944
+Lower Quartile 25% (Q1) = 15.012739136
+Upper Quartile 75% (Q3) = 19.306908734
+Interquartile Range (IQR) = 4.294169599
+Percentile 10 = 13.538631913
+Percentile 90 = 21.267828610
+kurtosis = 1.599599785
+Percentage Coefficiente Kurtosis = 16.595240740
+Excess kurtosis = Platykurtic
+Skewness = 0.16938118980
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+MDR:
+0.25000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.25000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+0.00000000
+Mean (CI) = 0.01666667 (+-0.02)
+Mean = 0.01666667
+Confidence Interval = 0.02368404
+Geometric Mean = 0.00000000
+Median = 0.00000000
+Mode = NaN
+Sum = 0.50000000
+Variance = 0.00402299
+Standard Deviation = 0.06342703
+Mean Deviation = 0.03111111
+Minimum = 0.00000000
+Maximum = 0.25000000
+Amplitude = 0.25000000
+Lower Quartile 25% (Q1) = 0.00000000
+Upper Quartile 75% (Q3) = 0.00000000
+Interquartile Range (IQR) = 0.00000000
+Percentile 10 = 0.00000000
+Percentile 90 = 0.00000000
+kurtosis = 12.20663265
+Percentage Coefficiente Kurtosis = 0.00000000
+Excess kurtosis = Leptokurtic
+Skewness = 3.65999869
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+MTD:
+4315.75000000
+203.50000000
+204.25000000
+201.75000000
+277.25000000
+256.25000000
+240.00000000
+221.00000000
+252.50000000
+347.25000000
+238.75000000
+247.50000000
+190.25000000
+300.25000000
+135.00000000
+273.50000000
+281.00000000
+253.75000000
+288.00000000
+186.50000000
+217.50000000
+4166.50000000
+175.75000000
+249.00000000
+220.00000000
+168.75000000
+250.75000000
+181.50000000
+148.75000000
+329.75000000
+Mean (CI) = 500.74166667 (+-380.19)
+Mean = 500.74166667
+Confidence Interval = 380.18663989
+Geometric Mean = 276.97444622
+Median = 243.75000000
+Mode = NaN
+Sum = 15022.25000000
+Variance = 1036646.77363506
+Standard Deviation = 1018.15852088
+Mean Deviation = 498.71777778
+Minimum = 135.00000000
+Maximum = 4315.75000000
+Amplitude = 4180.75000000
+Lower Quartile 25% (Q1) = 198.87500000
+Upper Quartile 75% (Q3) = 278.18750000
+Interquartile Range (IQR) = 79.31250000
+Percentile 10 = 169.45000000
+Percentile 90 = 345.50000000
+kurtosis = 12.15884880
+Percentage Coefficiente Kurtosis = 6981.48281250
+Excess kurtosis = Platykurtic
+Skewness = 3.64719482
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+MTFA:
+7267.92222222
+4480.31818182
+3944.45128205
+3796.21333333
+4629.37673203
+7700.04700855
+6894.82222222
+7147.53428571
+7061.71538462
+7267.70681818
+9978.20323887
+7031.20416667
+6942.58277512
+4174.23730159
+5102.22666667
+7412.64444444
+4042.14038462
+6984.38000000
+7196.12333333
+4392.23947368
+7168.09333333
+7035.15903680
+7754.95050505
+4769.19333333
+7000.28833333
+10052.08923077
+10212.89642857
+6977.94188034
+7122.10747475
+7025.26000000
+Mean (CI) = 6618.80229373 (+-655.36)
+Mean = 6618.80229373
+Confidence Interval = 655.35732892
+Geometric Mean = 6382.49632060
+Median = 7028.23208333
+Mode = NaN
+Sum = 198564.06881199
+Variance = 3080302.85857022
+Standard Deviation = 1755.07916020
+Mean Deviation = 1349.25493030
+Minimum = 3796.21333333
+Maximum = 10212.89642857
+Amplitude = 6416.68309524
+Lower Quartile 25% (Q1) = 4734.23918301
+Upper Quartile 75% (Q3) = 7267.76066919
+Interquartile Range (IQR) = 2533.52148619
+Percentile 10 = 4055.35007631
+Percentile 90 = 9755.87796548
+kurtosis = -0.16281818
+Percentage Coefficiente Kurtosis = 7221204.94490844
+Excess kurtosis = Platykurtic
+Skewness = 0.12222356
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+MTR:
+1.26303462
+22.01630556
+19.31187898
+18.81642297
+16.69748145
+30.04896394
+28.72842593
+32.34178410
+27.96718964
+20.92932129
+41.79352142
+28.40890572
+36.49189369
+13.90253889
+37.79427160
+27.10290473
+14.38484123
+27.52465025
+24.98653935
+23.55088190
+32.95675096
+1.26637928
+44.12489619
+19.15338688
+31.81949242
+59.56793618
+40.72939752
+38.44596077
+47.87971412
+21.30480667
+Mean (CI) = 27.71034928 (+-4.74)
+Mean = 27.71034928
+Confidence Interval = 4.74439206
+Geometric Mean = 22.60589059
+Median = 27.74591994
+Mode = NaN
+Sum = 831.31047826
+Variance = 161.43520119
+Standard Deviation = 12.70571530
+Mean Deviation = 9.56292434
+Minimum = 1.26303462
+Maximum = 59.56793618
+Amplitude = 58.30490156
+Lower Quartile 25% (Q1) = 19.27225596
+Upper Quartile 75% (Q3) = 36.81748817
+Interquartile Range (IQR) = 17.54523221
+Percentile 10 = 13.95076912
+Percentile 90 = 43.89175871
+kurtosis = 0.65036077
+Percentage Coefficiente Kurtosis = 262.66080753
+Excess kurtosis = Platykurtic
+Skewness = 0.12839134
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+Precision:
+0.02777778
+0.10344828
+0.12121212
+0.11111111
+0.09756098
+0.10714286
+0.09756098
+0.12121212
+0.07894737
+0.10344828
+0.08333333
+0.11764706
+0.11428571
+0.09375000
+0.10000000
+0.16666667
+0.06451613
+0.15384615
+0.08108108
+0.09523810
+0.12121212
+0.05882353
+0.11764706
+0.07692308
+0.14285714
+0.12500000
+0.11538462
+0.14814815
+0.11764706
+0.08823529
+Mean (CI) = 0.10505547 (+-0.01)
+Mean = 0.10505547
+Confidence Interval = 0.01080331
+Geometric Mean = 0.10023174
+Median = 0.10529557
+Mode = 0.11764706
+Sum = 3.15166414
+Variance = 0.00083705
+Standard Deviation = 0.02893179
+Mean Deviation = 0.02167919
+Minimum = 0.02777778
+Maximum = 0.16666667
+Amplitude = 0.13888889
+Lower Quartile 25% (Q1) = 0.08700980
+Upper Quartile 75% (Q3) = 0.12121212
+Interquartile Range (IQR) = 0.03420232
+Percentile 10 = 0.06575682
+Percentile 90 = 0.14761905
+kurtosis = 0.94387696
+Percentage Coefficiente Kurtosis = 0.00139994
+Excess kurtosis = Leptokurtic
+Skewness = -0.28436376
+Coefficiente Skewness = -0.02489649
+Skewed Distribution = Negative Skew
+Sample Size = 30
+
+Recall:
+0.25000000
+0.75000000
+1.00000000
+1.00000000
+1.00000000
+0.75000000
+1.00000000
+1.00000000
+0.75000000
+0.75000000
+0.75000000
+1.00000000
+1.00000000
+0.75000000
+1.00000000
+0.75000000
+0.50000000
+1.00000000
+0.75000000
+1.00000000
+1.00000000
+0.75000000
+1.00000000
+0.75000000
+1.00000000
+1.00000000
+0.75000000
+1.00000000
+1.00000000
+0.75000000
+Mean (CI) = 0.85833333 (+-0.07)
+Mean = 0.85833333
+Confidence Interval = 0.06795357
+Geometric Mean = 0.83161345
+Median = 1.00000000
+Mode = 1.00000000
+Sum = 25.75000000
+Variance = 0.03311782
+Standard Deviation = 0.18198301
+Mean Deviation = 0.15111111
+Minimum = 0.25000000
+Maximum = 1.00000000
+Amplitude = 0.75000000
+Lower Quartile 25% (Q1) = 0.75000000
+Upper Quartile 75% (Q3) = 1.00000000
+Interquartile Range (IQR) = 0.25000000
+Percentile 10 = 0.75000000
+Percentile 90 = 1.00000000
+kurtosis = 2.91024013
+Percentage Coefficiente Kurtosis = 0.03125000
+Excess kurtosis = Leptokurtic
+Skewness = -1.47677557
+Coefficiente Skewness = -2.33538290
+Skewed Distribution = Negative Skew
+Sample Size = 30
+
+MCC:
+0.08320414
+0.27846582
+0.34809220
+0.33326666
+0.31227528
+0.28339775
+0.31227528
+0.34809220
+0.24324188
+0.27846582
+0.24991248
+0.34293285
+0.33799619
+0.26508327
+0.31615660
+0.35349593
+0.17950538
+0.39217833
+0.24650959
+0.30853339
+0.34809220
+0.20993565
+0.34293285
+0.24010064
+0.37790777
+0.35349151
+0.29410187
+0.38484484
+0.34293285
+0.25716318
+Mean (CI) = 0.29881948 (+-0.02)
+Mean = 0.29881948
+Confidence Interval = 0.02492403
+Geometric Mean = 0.28862466
+Median = 0.31227528
+Mode = 0.34293285
+Sum = 8.96458440
+Variance = 0.00445527
+Standard Deviation = 0.06674779
+Mean Deviation = 0.05170439
+Minimum = 0.08320414
+Maximum = 0.39217833
+Amplitude = 0.30897420
+Lower Quartile 25% (Q1) = 0.25535051
+Upper Quartile 75% (Q3) = 0.34809220
+Interquartile Range (IQR) = 0.09274169
+Percentile 10 = 0.21295215
+Percentile 90 = 0.37546659
+kurtosis = 2.40376068
+Percentage Coefficiente Kurtosis = 0.00753593
+Excess kurtosis = Leptokurtic
+Skewness = -1.26598133
+Coefficiente Skewness = -0.60477508
+Skewed Distribution = Negative Skew
+Sample Size = 30
+
+F1:
+0.05000000
+0.18181818
+0.21621622
+0.20000000
+0.17777778
+0.18750000
+0.17777778
+0.21621622
+0.14285714
+0.18181818
+0.15000000
+0.21052632
+0.20512821
+0.16666667
+0.18181818
+0.27272727
+0.11428571
+0.26666667
+0.14634146
+0.17391304
+0.21621622
+0.10909091
+0.21052632
+0.13953488
+0.25000000
+0.22222222
+0.20000000
+0.25806452
+0.21052632
+0.15789474
+Mean (CI) = 0.18647104 (+-0.02)
+Mean = 0.18647104
+Confidence Interval = 0.01806401
+Geometric Mean = 0.17857792
+Median = 0.18465909
+Mode = 0.18181818
+Sum = 5.59413114
+Variance = 0.00234027
+Standard Deviation = 0.04837631
+Mean Deviation = 0.03636473
+Minimum = 0.05000000
+Maximum = 0.27272727
+Amplitude = 0.22272727
+Lower Quartile 25% (Q1) = 0.15592105
+Upper Quartile 75% (Q3) = 0.21621622
+Interquartile Range (IQR) = 0.06029516
+Percentile 10 = 0.11681063
+Percentile 90 = 0.25725806
+kurtosis = 1.06209243
+Percentage Coefficiente Kurtosis = 0.00423415
+Excess kurtosis = Leptokurtic
+Skewness = -0.57324668
+Coefficiente Skewness = 0.11236595
+Skewed Distribution = Positive Skew
+Sample Size = 30
+
+FN:
+3.00000000
+1.00000000
+0.00000000
+0.00000000
+0.00000000
+1.00000000
+0.00000000
+0.00000000
+1.00000000
+1.00000000
+1.00000000
+0.00000000
+0.00000000
+1.00000000
+0.00000000
+1.00000000
+2.00000000
+0.00000000
+1.00000000
+0.00000000
+0.00000000
+1.00000000
+0.00000000
+1.00000000
+0.00000000
+0.00000000
+1.00000000
+0.00000000
+0.00000000
+1.00000000
+Mean (CI) = 0.56666667 (+-0.27)
+Mean = 0.56666667
+Confidence Interval = 0.27181429
+Geometric Mean = 0.00000000
+Median = 0.00000000
+Mode = NaN
+Sum = 17.00000000
+Variance = 0.52988506
+Standard Deviation = 0.72793204
+Mean Deviation = 0.60444444
+Minimum = 0.00000000
+Maximum = 3.00000000
+Amplitude = 3.00000000
+Lower Quartile 25% (Q1) = 0.00000000
+Upper Quartile 75% (Q3) = 1.00000000
+Interquartile Range (IQR) = 1.00000000
+Percentile 10 = 0.00000000
+Percentile 90 = 1.00000000
+kurtosis = 2.91024013
+Percentage Coefficiente Kurtosis = 0.50000000
+Excess kurtosis = Platykurtic
+Skewness = 1.47677557
+Coefficiente Skewness = NaN
+Skewed Distribution = NaN
+Sample Size = 30
+
+FP:
+35.00000000
+26.00000000
+29.00000000
+32.00000000
+37.00000000
+25.00000000
+37.00000000
+29.00000000
+35.00000000
+26.00000000
+33.00000000
+30.00000000
+31.00000000
+29.00000000
+36.00000000
+15.00000000
+29.00000000
+22.00000000
+34.00000000
+38.00000000
+29.00000000
+48.00000000
+30.00000000
+36.00000000
+24.00000000
+28.00000000
+23.00000000
+23.00000000
+30.00000000
+31.00000000
+Mean (CI) = 30.33333333 (+-2.33)
+Mean = 30.33333333
+Confidence Interval = 2.32538231
+Geometric Mean = 29.68614684
+Median = 30.00000000
+Mode = 29.00000000
+Sum = 910.00000000
+Variance = 38.78160920
+Standard Deviation = 6.22748819
+Mean Deviation = 4.57777778
+Minimum = 15.00000000
+Maximum = 48.00000000
+Amplitude = 33.00000000
+Lower Quartile 25% (Q1) = 26.00000000
+Upper Quartile 75% (Q3) = 35.00000000
+Interquartile Range (IQR) = 9.00000000
+Percentile 10 = 23.00000000
+Percentile 90 = 37.00000000
+kurtosis = 1.65824394
+Percentage Coefficiente Kurtosis = 63.00000000
+Excess kurtosis = Platykurtic
+Skewness = 0.24969266
+Coefficiente Skewness = 0.16057838
+Skewed Distribution = Positive Skew
+Sample Size = 30
+
+TN:
+79961.00000000
+79970.00000000
+79967.00000000
+79964.00000000
+79959.00000000
+79971.00000000
+79959.00000000
+79967.00000000
+79961.00000000
+79970.00000000
+79963.00000000
+79966.00000000
+79965.00000000
+79967.00000000
+79960.00000000
+79981.00000000
+79967.00000000
+79974.00000000
+79962.00000000
+79958.00000000
+79967.00000000
+79948.00000000
+79966.00000000
+79960.00000000
+79972.00000000
+79968.00000000
+79973.00000000
+79973.00000000
+79966.00000000
+79965.00000000
+Mean (CI) = 79965.66666667 (+-2.33)
+Mean = 79965.66666667
+Confidence Interval = 2.32538231
+Geometric Mean = 79965.66643226
+Median = 79966.00000000
+Mode = 79967.00000000
+Sum = 2398970.00000000
+Variance = 38.78160920
+Standard Deviation = 6.22748819
+Mean Deviation = 4.57777778
+Minimum = 79948.00000000
+Maximum = 79981.00000000
+Amplitude = 33.00000000
+Lower Quartile 25% (Q1) = 79961.00000000
+Upper Quartile 75% (Q3) = 79970.00000000
+Interquartile Range (IQR) = 9.00000000
+Percentile 10 = 79959.00000000
+Percentile 90 = 79973.00000000
+kurtosis = 1.65824394
+Percentage Coefficiente Kurtosis = 63.00000000
+Excess kurtosis = Platykurtic
+Skewness = -0.24969266
+Coefficiente Skewness = -0.16057838
+Skewed Distribution = Negative Skew
+Sample Size = 30
+
+TP:
+1.00000000
+3.00000000
+4.00000000
+4.00000000
+4.00000000
+3.00000000
+4.00000000
+4.00000000
+3.00000000
+3.00000000
+3.00000000
+4.00000000
+4.00000000
+3.00000000
+4.00000000
+3.00000000
+2.00000000
+4.00000000
+3.00000000
+4.00000000
+4.00000000
+3.00000000
+4.00000000
+3.00000000
+4.00000000
+4.00000000
+3.00000000
+4.00000000
+4.00000000
+3.00000000
+Mean (CI) = 3.43333333 (+-0.27)
+Mean = 3.43333333
+Confidence Interval = 0.27181429
+Geometric Mean = 3.32645381
+Median = 4.00000000
+Mode = 4.00000000
+Sum = 103.00000000
+Variance = 0.52988506
+Standard Deviation = 0.72793204
+Mean Deviation = 0.60444444
+Minimum = 1.00000000
+Maximum = 4.00000000
+Amplitude = 3.00000000
+Lower Quartile 25% (Q1) = 3.00000000
+Upper Quartile 75% (Q3) = 4.00000000
+Interquartile Range (IQR) = 1.00000000
+Percentile 10 = 3.00000000
+Percentile 90 = 4.00000000
+kurtosis = 2.91024013
+Percentage Coefficiente Kurtosis = 0.50000000
+Excess kurtosis = Platykurtic
+Skewness = -1.47677557
+Coefficiente Skewness = -2.33538286
+Skewed Distribution = Negative Skew
+Sample Size = 30
+
+Drift point distance:
+210.00	FN	FN	FN	
+184.00	19.00	205.00	FN	
+139.00	73.00	300.00	305.00	
+284.00	137.00	132.00	254.00	
+325.00	156.00	289.00	339.00	
+111.00	FN	217.00	198.00	
+92.00	222.00	338.00	308.00	
+140.00	230.00	335.00	179.00	
+137.00	252.00	FN	263.00	
+211.00	FN	271.00	187.00	
+237.00	137.00	FN	206.00	
+253.00	290.00	247.00	200.00	
+118.00	120.00	276.00	247.00	
+297.00	FN	144.00	289.00	
+91.00	188.00	246.00	15.00	
+234.00	159.00	319.00	FN	
+252.00	88.00	FN	FN	
+322.00	29.00	348.00	316.00	
+255.00	FN	143.00	243.00	
+253.00	11.00	246.00	236.00	
+139.00	235.00	201.00	295.00	
+297.00	249.00	FN	120.00	
+124.00	219.00	329.00	31.00	
+233.00	177.00	FN	211.00	
+261.00	93.00	240.00	286.00	
+164.00	145.00	201.00	165.00	
+225.00	92.00	FN	311.00	
+132.00	158.00	324.00	112.00	
+265.00	30.00	117.00	183.00	
+FN	134.00	313.00	221.00	
+Drifts Means = 206.38 (+-27.25)	145.72 (+-32.20)	251.35 (+-30.49)	220.00 (+-33.43)	
+General Mean = 205.14
+Mean (CI) = 206.38 (+-27.25)	145.72 (+-32.20)	251.35 (+-30.49)	220.00 (+-33.43)	
+Mean = 206.38	145.72	251.35	220.00	
